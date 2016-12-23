@@ -38,7 +38,8 @@ class Expression(object):
         i = 1
         while i < len(expression_list):
             if ((expression_list[i] is '(' and
-                    self.__numbers.is_number(expression_list[i - 1]))
+                    (self.__numbers.is_number(expression_list[i - 1])
+                        or expression_list[i - 1] is ')'))
                     or (expression_list[i - 1] is ')'
                         and self.__numbers.is_number(expression_list[i]))):
                 expression_list.insert(i, '*')
