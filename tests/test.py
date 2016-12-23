@@ -2,7 +2,7 @@
 
 import unittest
 from math import *
-from ecalculator.calc import evaluate
+from calculator import evaluate
 
 class TestCalcExpression(unittest.TestCase):
 
